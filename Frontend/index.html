@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthAI Symptom Checker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header id="app-header" class="hidden">
+        <div class="header-content">
+            <nav>
+                <button id="home-btn" class="nav-btn active">🏠 Home</button>
+                <button id="history-btn" class="nav-btn">📜 History</button>
+            </nav>
+            <button id="profile-btn" class="profile-btn">👤</button>
+        </div>
+    </header>
+
+    <div id="splash">
+        <h1>🩺 HealthAI</h1>
+        <p>Your personal AI health assistant</p>
+    </div>
+
+    <div id="main-container">
+
+        <div class="card" id="login-card">
+            <div class="header">
+                <h1>Welcome to HealthAI</h1>
+                <p class="subtitle">Please sign in or register to continue.</p>
+            </div>
+            <div class="input-area">
+                <input type="email" id="email-input" class="dynamic-input" placeholder="Email" style="height: 50px; margin-bottom: 0.5rem;">
+                <input type="password" id="password-input" class="dynamic-input" placeholder="Password" style="height: 50px;">
+            </div>
+            <div style="padding: 0 1.5rem 1.5rem; display: flex; gap: 1rem;">
+                <button id="login-btn">Login</button>
+                <button id="register-btn" class="secondary-btn" style="width: auto; flex-grow: 1;">Register</button>
+            </div>
+        </div>
+        
+        <div class="card" id="input-card">
+            <div class="header">
+                <h1>🩺 Symptom Checker</h1>
+                <div id="progress-indicator"></div>
+                <p class="subtitle" id="subtitle">Let's begin by identifying your symptoms.</p>
+            </div>
+            <div class="input-area" id="input-area">
+            </div>
+            <div class="card-footer">
+                <p>Analysis powered by Google AI</p>
+            </div>
+        </div>
+
+        <div class="card" id="result-card">
+            <div class="header">
+                <h1>🔬 Analysis Result</h1>
+                <p class="subtitle">Here are the potential insights based on your symptoms.</p>
+                <button id="read-aloud-btn" class="secondary-btn" style="width: auto; padding: 8px 15px; margin-top: 1rem; display: none;">🔊 Read Aloud</button>
+            </div>
+            <div id="result-content">
+            </div>
+            <div class="end-box">
+                <h3>Next Steps</h3>
+                <p>Consult a healthcare professional for an accurate diagnosis.</p>
+                <button class="secondary-btn">Find a Doctor Nearby</button>
+                <a href="#" id="start-over-link" class="start-over-link">Start New Analysis</a>
+            </div>
+            <p class="disclaimer">
+                ⚠️ This tool is not a substitute for professional medical advice.
+            </p>
+        </div>
+
+        <div class="card" id="history-card" class="hidden">
+            <div class="header">
+                <h1>📜 History</h1>
+                <p class="subtitle">A log of your previous analyses.</p>
+            </div>
+            <div id="history-content-area">
+                <p style="text-align: center; padding: 2rem;">Your history will be displayed here.</p>
+            </div>
+        </div>
+        
+        <div class="card" id="profile-card" class="hidden">
+            <div class="header">
+                <h1>👤 Profile</h1>
+                <p class="subtitle">Manage your personal details.</p>
+            </div>
+            <div id="profile-content-area">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration - REPLACE WITH YOURS
+        const firebaseConfig = {
+            apiKey: "AIzaSyAal3YKt-JTrY5NQB-4tdu57CzHKZG6KqI",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

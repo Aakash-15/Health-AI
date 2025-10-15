@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+Backend/.env
+
+# Service Account Keys (Sensitive)
+Backend/serviceAccountKey.json
