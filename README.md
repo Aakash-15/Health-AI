@@ -25,10 +25,9 @@ This project is built with a modern, full-stack JavaScript architecture.
   * **Frontend**:
       * HTML5
       * CSS3
-      * Vanilla JavaScript (for DOM manipulation and API calls)
+      * JavaScript
   * **Backend**:
       * Node.js
-      * Express.js
   * **Database & Auth**:
       * **Firebase Authentication**: For user management.
       * **Google Firestore**: A NoSQL database for storing user profiles and analysis history.
