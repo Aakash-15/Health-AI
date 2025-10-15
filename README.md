@@ -3,6 +3,7 @@ HealthAI Symptom Checker 🩺
 HealthAI is an intelligent, conversational web application designed to help users understand their health symptoms. Powered by the Google Gemini API, it guides users through a series of questions to gather information and then provides a structured analysis of potential causes, home care advice, and guidance on when to seek professional medical attention.
 
 ✨ Key Features
+
 🤖 Conversational AI: Engages users in a dynamic Q&A flow to gather detailed symptom information.
 
 🧠 Intelligent Analysis: Leverages the Google Gemini API to generate empathetic and structured health insights.
